@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="TestNG">
-    <test name="TestNG сценарии">
+    <test name="TestNG сценарии" parallel="methods" thread-count="5">
 <!--        <groups>-->
 <!--            <run>-->
-<!--                <include name="${tags}"/>-->
+<!--                <include name="smoke"/>-->
 <!--            </run>-->
 <!--        </groups>-->
         <classes>
-            <class name="org.example.ComplexTest"/>
+            <class name="org.example.ThreadTest"/>
+<!--            <class name="org.example.SimpleTest"/>-->
+<!--            <class name="org.example.ComplexTest"/>-->
         </classes>
     </test>
 </suite>
